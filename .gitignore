@@ -4,3 +4,4 @@ data/Euroleague_Perfect_Schedule.xlsx
 plan.md
 .streamlit
 src/creds.json
+src/main.py

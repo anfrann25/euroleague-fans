@@ -30,6 +30,26 @@ except Exception as e:
     st.error(f"Σφάλμα σύνδεσης με το Google Sheet (Βεβαιώσου ότι υπάρχουν τα tabs 'predictions' και 'user_creds'): {e}")
     st.stop()
 
+# @st.cache_resource
+# def init_connection():
+#     scope = ["https://www.googleapis.com/auth/spreadsheets"]
+#     creds_dict = dict(st.secrets["gcp_service_account"])
+#     creds = Credentials.from_service_account_info(creds_dict, scopes=scope)
+#     client = gspread.authorize(creds)
+    
+#     # Ανοίγουμε το Google Sheet
+#     spreadsheet = client.open("Euroleague_Predictions")
+#     return spreadsheet
+
+# try:
+#     spreadsheet = init_connection()
+#     preds_sheet = spreadsheet.worksheet("Sheet1") # Tab για προβλέψεις
+#     users_sheet = spreadsheet.worksheet("Users")   # Tab για χρήστες
+# except Exception as e:
+#     st.error(f"Σφάλμα σύνδεσης με το Google Sheet (Βεβαιώσου ότι υπάρχουν τα tabs 'Sheet1' και 'Users'): {e}")
+#     st.stop()
+
+
 # --- 3. ΚΥΡΙΩΣ ΕΦΑΡΜΟΓΗ ---
 st.success("Επιτυχής σύνδεση με το Google Sheet! 🚀")
 
